@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".home">
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/optionsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:fab_labelStyle="@style/labelcolor">
+        
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/studentsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/student"
+            app:fab_title="Estudiantes"
+            android:onClick="studentClick"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/teacherBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/teacher"
+            app:fab_title="Profesores"
+            android:onClick="teacherClick"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <Button
+        android:id="@+id/logOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="logOutClick"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
