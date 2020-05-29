@@ -32,13 +32,16 @@
             app:fab_title="Profesores"
             android:onClick="teacherClick"/>
 
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/power"
+            app:fab_title="Cerrar Sesión"
+            android:onClick="logoutClick"/>
+
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
-    <Button
-        android:id="@+id/logOutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="logOutClick"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

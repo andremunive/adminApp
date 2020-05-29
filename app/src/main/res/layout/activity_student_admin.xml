@@ -11,20 +11,56 @@
         android:id="@+id/settingsIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/settings"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/settings" />
 
     <TextView
         android:id="@+id/iconLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Estudiantes"
         android:layout_below="@+id/settingsIcon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:text="Estudiantes"
+        android:textColor="#FFFFFF"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconLabel"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:id="@+id/scrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addStudentBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Agregar Estudiante" />
+
+            <Button
+                android:id="@+id/deleteStudentBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/addStudentBtn"
+                android:layout_marginTop="20dp"
+                android:text="Eliminar Estudiante"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

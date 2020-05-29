@@ -18,8 +18,9 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    public void logOutClick(View view){
+    public void logoutClick(View view){
         auth.signOut();
+        showloginView();
     }
 
     public void studentClick(View view){
@@ -40,5 +41,11 @@ public class home extends AppCompatActivity {
     public void showTeacherView(){
         Intent teacherIntent = new Intent(this, teacherAdmin.class);
         startActivity(teacherIntent);
+    }
+
+    public void showloginView(){
+        finish();
+        Intent loginIntent = new Intent(this, MainActivity.class);
+        startActivity(loginIntent);
     }
 }

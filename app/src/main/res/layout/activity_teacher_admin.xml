@@ -27,6 +27,42 @@
         android:textSize="30dp"
         android:textStyle="bold"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconLabel"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:id="@+id/scrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addTeacherBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Agregar Profesor" />
+
+            <Button
+                android:id="@+id/deleteTeacherBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/addTeacherBtn"
+                android:layout_marginTop="20dp"
+                android:text="Eliminar Profesor"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 
 
