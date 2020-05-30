@@ -55,15 +55,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loginClick(View view) {
-        /*auth.signInWithEmailAndPassword(user.getText().toString(), password.getText().toString())
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(MainActivity.this, "Logeado", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });*/
         adminValidate();
     }
 
