@@ -20,9 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signIn extends AppCompatActivity {
 
-    private ProgressDialog dialog;
     private EditText name, lastName, user, email, password, accesscode;
-    private DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference("Admins");
+    private DatabaseReference mDatabase;
     private FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
@@ -37,72 +36,69 @@ public class signIn extends AppCompatActivity {
         email = findViewById(R.id.emailTxt);
         password = findViewById(R.id.passwordTxt);
         accesscode = findViewById(R.id.accessCodeTxt);
-        dialog = new ProgressDialog(this);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
     }
 
-    public void registerClick(View view){
-        /**
-         * Validación de campos
-         */
-        if(name.getText().toString().isEmpty()){
+    public void registerClick(View view) {
+        if (name.getText().toString().isEmpty()) {
             name.setError("Campo obligatorio");
-        }else if(lastName.getText().toString().isEmpty()){
+        } else if (lastName.getText().toString().isEmpty()) {
             lastName.setError("Campo obligatorio");
-        }else if(user.getText().toString().isEmpty()){
+        } else if (user.getText().toString().isEmpty()) {
             user.setError("Campo obligatorio");
-        }else if(email.getText().toString().isEmpty()){
+        } else if (email.getText().toString().isEmpty()) {
             email.setError("Campo obligatorio");
-        }else if(password.getText().toString().isEmpty()){
+        } else if (password.getText().toString().isEmpty()) {
             password.setError("Campo obligatorio");
-        }else if(accesscode.getText().toString().isEmpty()){
+        } else if (accesscode.getText().toString().isEmpty()) {
             accesscode.setError("Campo obligatorio");
-        }else if(!accesscode.getText().toString().equals("123456")){
+        } else if (!accesscode.getText().toString().equals("123456")) {
             accesscode.setError("Código inválido");
-        }else{
-            /**
-             * Campos validados
-             * Registro en la base de datos
-             */
+        } else {
+            signinMethod(name.getText().toString().trim(),
+                    lastName.getText().toString().trim(),
+                    user.getText().toString().trim(),
+                    email.getText().toString().trim(),
+                    password.getText().toString().trim());
+        }
+    }
 
-            final admins administrador = new admins(
-                    name.getText().toString(),
-                    lastName.getText().toString(),
-                    user.getText().toString(),
-                    email.getText().toString(),
-                    password.getText().toString()
+    public void signinMethod(String nombre, String apellido, String usuario,
+                             String correo, String clave) {
+
+            admins administrator = new admins(
+                    nombre,
+                    apellido,
+                    usuario,
+                    correo,
+                    clave
             );
 
-            dialog.setMessage("Registrando Administrador...");
-            dialog.show();
-
-            auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+            //Creación del usuario con email y contraseña
+            auth.createUserWithEmailAndPassword(correo, clave)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 Toast.makeText(signIn.this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
 
-            dbReference.child(user.getText().toString()).setValue(administrador)
-                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            mDatabase.child("Admins").child(usuario).setValue(administrator)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            dialog.dismiss();
                             if(task.isSuccessful()){
                                 showLogin();
                             }
                         }
                     });
-
-
-        }
     }
 
-    public void showLogin(){
+    public void showLogin() {
         Intent loginIntent = new Intent(signIn.this, MainActivity.class);
         startActivity(loginIntent);
     }

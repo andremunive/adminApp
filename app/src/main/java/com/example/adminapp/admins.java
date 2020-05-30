@@ -1,11 +1,11 @@
 package com.example.adminapp;
 
 public class admins {
-    String name;
-    String lastName;
-    String user;
-    String email;
-    String password;
+    public String name;
+    public String lastName;
+    public String user;
+    public String email;
+    public String password;
 
     public admins() {
     }
