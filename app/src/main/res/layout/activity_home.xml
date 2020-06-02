@@ -15,12 +15,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:fab_labelStyle="@style/labelcolor">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/materiasBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_icon=""/>
         
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/studentsBtn"
@@ -45,7 +39,6 @@
             app:fab_icon="@drawable/power"
             app:fab_title="Cerrar Sesión"
             android:onClick="logoutClick"/>
-
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 

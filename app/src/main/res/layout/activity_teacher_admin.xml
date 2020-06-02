@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/imgg"
     tools:context=".teacherAdmin">
 
     <ImageView
         android:id="@+id/settingsIcon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/settings"
+        android:layout_height="220dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/teach" />
 
     <TextView
         android:id="@+id/iconLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Profesores"
         android:layout_below="@+id/settingsIcon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:text="Profesores"
+        android:textColor="#000"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iconLabel"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="40dp">
 
         <RelativeLayout
             android:id="@+id/scrollLayout"
@@ -46,25 +47,24 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
+                android:background="@drawable/color_buttom"
                 android:text="Agregar Profesor" />
 
             <Button
                 android:id="@+id/deleteTeacherBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/addTeacherBtn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_below="@+id/addTeacherBtn"
                 android:layout_marginTop="20dp"
-                android:text="Eliminar Profesor"/>
+                android:layout_marginRight="30dp"
+                android:background="@drawable/naranja_buttom"
+                android:text="Eliminar Profesor" />
 
         </RelativeLayout>
 
     </ScrollView>
-
-
-
 
 
 </RelativeLayout>
