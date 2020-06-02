@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="250dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="31dp"
         android:backgroundTint="#33CC99"
         android:hint="Nombre"
         android:inputType="text"
