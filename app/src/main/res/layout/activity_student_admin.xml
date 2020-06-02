@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imgg"
+    android:background="#000000"
     tools:context=".studentAdmin">
 
     <ImageView
         android:id="@+id/settingsIcon"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        app:srcCompat="@drawable/student" />
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/settings" />
 
     <TextView
         android:id="@+id/iconLabel"
@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/settingsIcon"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Estudiantes"
-        android:textColor="#000"
-        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <ScrollView
@@ -37,7 +37,6 @@
             android:id="@+id/scrollLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <Button
@@ -47,20 +46,18 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/color_buttom"
                 android:text="Agregar Estudiante" />
 
             <Button
                 android:id="@+id/deleteStudentBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/addStudentBtn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/naranja_buttom"
-                android:text="Eliminar Estudiante" />
+                android:layout_below="@+id/addStudentBtn"
+                android:layout_marginTop="20dp"
+                android:text="Eliminar Estudiante"/>
 
         </RelativeLayout>
 

@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".teacherAdmin"></activity>
+        <activity android:name=".signInStudent"></activity>
+        <activity android:name=".teacherAdmin" />
         <activity android:name=".studentAdmin" />
         <activity android:name=".home" />
         <activity
