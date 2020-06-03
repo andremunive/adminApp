@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/imgg"
     tools:context=".home">
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
@@ -15,33 +14,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:fab_labelStyle="@style/labelcolor">
-        
+
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/studentsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="studentClick"
             app:fab_icon="@drawable/student"
-            app:fab_title="Estudiantes"
-            android:onClick="studentClick"/>
+            app:fab_title="Estudiantes" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/teacherBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="teacherClick"
             app:fab_icon="@drawable/teacher"
-            app:fab_title="Profesores"
-            android:onClick="teacherClick"/>
+            app:fab_title="Profesores" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="logoutClick"
             app:fab_icon="@drawable/power"
-            app:fab_title="Cerrar Sesión"
-            android:onClick="logoutClick"/>
+            app:fab_title="Cerrar Sesión" />
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
