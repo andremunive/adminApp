@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.passwordTxt);
 
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-
                 showHome();
-
         }
     }
 
