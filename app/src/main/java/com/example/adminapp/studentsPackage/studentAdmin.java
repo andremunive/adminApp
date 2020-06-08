@@ -1,10 +1,13 @@
-package com.example.adminapp;
+package com.example.adminapp.studentsPackage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.adminapp.R;
+import com.example.adminapp.studentsPackage.signInStudent;
 
 public class studentAdmin extends AppCompatActivity {
 

@@ -1,22 +1,20 @@
-package com.example.adminapp;
+package com.example.adminapp.teacherPackage;
 
-public class students {
+public class teachers {
     public String name;
     public String lastName;
     public String user;
     public String email;
     public String password;
-    public String courseID;
 
-    public students() {
+    public teachers() {
     }
 
-    public students(String name, String lastName, String user, String email, String password, String courseID) {
+    public teachers(String name, String lastName, String user, String email, String password) {
         this.name = name;
         this.lastName = lastName;
         this.user = user;
         this.email = email;
         this.password = password;
-        this.courseID = courseID;
     }
 }

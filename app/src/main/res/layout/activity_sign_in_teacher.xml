@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imgg"
-    tools:context=".studentsPackage.signInStudent">
+    tools:context=".teacherPackage.signInTeacher">
 
     <ImageView
         android:id="@+id/settingsIcon"
@@ -22,7 +21,7 @@
         android:layout_below="@+id/settingsIcon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="Estudiantes"
+        android:text="Profesor"
         android:textColor="#000"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -110,43 +109,12 @@
                 android:textColor="#000"
                 android:textColorHint="#000" />
 
-            <TextView
-                android:id="@+id/courseLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/passwordTxt"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="7dp"
-                android:text="ID del curso"
-                android:textColor="#000"
-                android:textSize="18dp" />
-
-            <Spinner
-                android:id="@+id/courseSpinner"
-                android:layout_marginTop="7dp"
-                android:layout_marginLeft="4dp"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/passwordTxt"
-                android:layout_toRightOf="@+id/courseLabel"
-                android:backgroundTint="#33CC99"
-                android:entries="@array/coursesItems" />
-
-            <TextView
-                android:id="@+id/courseIdTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/passwordTxt"
-                android:layout_marginTop="7dp"
-                android:layout_toRightOf="@id/courseSpinner"
-                android:textColor="#000"
-                android:textSize="18dp" />
 
             <Button
                 android:id="@+id/signinBtn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/courseSpinner"
+                android:layout_below="@id/passwordTxt"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/color_buttom"
