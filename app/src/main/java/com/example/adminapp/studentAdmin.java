@@ -18,6 +18,15 @@ public class studentAdmin extends AppCompatActivity {
         showAddStudent();
     }
 
+    public void listarClick(View view){
+        showListar();
+    }
+
+    public void showListar(){
+        Intent optionsIntent = new Intent(this, optionsList.class);
+        startActivity(optionsIntent);
+    }
+
     public void showAddStudent(){
         Intent addStudentIntent = new Intent(this, signInStudent.class);
         startActivity(addStudentIntent);

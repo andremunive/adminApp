@@ -1,70 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/imgg"
-    tools:context=".studentAdmin">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/settingsIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-
-        app:srcCompat="@drawable/student" />
-
-
-    <TextView
-        android:id="@+id/iconLabel"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/settingsIcon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="Estudiantes"
-        android:textColor="#000"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_gravity="bottom">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iconLabel"
-        android:layout_marginTop="30dp">
-
-        <RelativeLayout
-            android:id="@+id/scrollLayout"
+        <Button
+            android:id="@+id/addStudent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Añadir Estudiante"
+            android:onClick="addStudentClick"/>
 
-            <Button
-                android:id="@+id/addStudentBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/color_buttom"
-                android:text="Agregar Estudiante" />
+        <Button
+            android:id="@+id/studentsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de Estudiantes"
+            android:onClick="listarClick"
+            android:layout_below="@+id/addStudent"/>
 
-            <Button
-                android:id="@+id/deleteStudentBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/addStudentBtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/naranja_buttom"
-                android:text="Eliminar Estudiante" />
 
-        </RelativeLayout>
 
-    </ScrollView>
+    </RelativeLayout>
 
-</RelativeLayout>
+</FrameLayout>

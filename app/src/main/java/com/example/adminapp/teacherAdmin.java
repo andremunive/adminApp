@@ -2,7 +2,6 @@ package com.example.adminapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,11 +14,12 @@ public class teacherAdmin extends AppCompatActivity {
     }
 
     public void addTeacherClick(View view){
-        showAddTeacher();
+
     }
 
-    public void showAddTeacher(){
-        Intent addTeacherIntent = new Intent(this, signInTeacher.class);
-        startActivity(addTeacherIntent);
+    public void listarClick(View view){
+
     }
+
+
 }

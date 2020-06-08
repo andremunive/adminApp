@@ -1,71 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imgg"
     tools:context=".teacherAdmin">
 
-    <ImageView
-        android:id="@+id/settingsIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        app:srcCompat="@drawable/teach" />
-
-    <TextView
-        android:id="@+id/iconLabel"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/settingsIcon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="Profesores"
-        android:textColor="#000"
-        android:textSize="30dp"
+        android:layout_gravity="bottom">
 
-        android:textStyle="bold" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iconLabel"
-        android:layout_marginTop="40dp">
-
-        <RelativeLayout
-            android:id="@+id/scrollLayout"
+        <Button
+            android:id="@+id/addTeacher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Añadir Profesor"
+            android:onClick="addTeacherClick"/>
 
-            <Button
-                android:id="@+id/addTeacherBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/color_buttom"
-                android:text="Agregar Profesor"
-                android:onClick="addTeacherClick"/>
-
-            <Button
-                android:id="@+id/deleteTeacherBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/addTeacherBtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/naranja_buttom"
-                android:text="Eliminar Profesor" />
-
-        </RelativeLayout>
-
-    </ScrollView>
+        <Button
+            android:id="@+id/studentsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de Profesor"
+            android:onClick="listarClick"
+            android:layout_below="@+id/addTeacher"/>
 
 
-</RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
