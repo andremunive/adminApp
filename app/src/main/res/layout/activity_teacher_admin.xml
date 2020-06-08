@@ -1,21 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/imgg"
     tools:context=".teacherPackage.teacherAdmin">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/login" />
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profesores"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/labelText">
 
         <Button
             android:id="@+id/addTeacher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Añadir Profesor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/color_buttom"
             android:onClick="addTeacherClick"/>
 
         <Button
@@ -24,10 +47,14 @@
             android:layout_height="wrap_content"
             android:text="Lista de Profesor"
             android:onClick="listarClick"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/naranja_buttom"
             android:layout_below="@+id/addTeacher"/>
 
 
 
     </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>

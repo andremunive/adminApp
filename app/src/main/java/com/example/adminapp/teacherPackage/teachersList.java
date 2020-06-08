@@ -46,7 +46,7 @@ public class teachersList extends AppCompatActivity {
                             .split(",")[0].split("=")[1];
 
                     teachersArray.add(nameAux+" "+lastNameAux);
-                    adapter = new ArrayAdapter(teachersList.this,
+                    adapter = new ArrayAdapter<String>(teachersList.this,
                             android.R.layout.simple_list_item_1,
                             teachersArray);
                     teachers.setAdapter(adapter);

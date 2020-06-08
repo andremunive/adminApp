@@ -59,9 +59,10 @@
 
         <Button
             android:id="@+id/loginBtn"
-            android:layout_width="270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/color_buttom"
             android:onClick="loginClick"
@@ -70,12 +71,13 @@
 
         <Button
             android:id="@+id/registerBtn"
-            android:layout_width="270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/loginBtn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="218dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:background="@drawable/naranja_buttom"
             android:onClick="signinClick"
 
